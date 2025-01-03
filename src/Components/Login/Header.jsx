@@ -9,7 +9,7 @@ const Header = () => {
     <div>
     <Navbar bg="dark" data-bs-theme="dark">
     <Container>
-      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+      <Navbar.Brand href="#home"> Product Management systme </Navbar.Brand>
       <Nav className="me-auto">
         <Nav.Link  to={Link} as="login">Login</Nav.Link>
       </Nav>

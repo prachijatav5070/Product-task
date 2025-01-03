@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#nav{
+  background-color: rgb(63, 63, 63);
+}
+#navheading{
+  color: whitesmoke;
+}
+#logout{
+  color:white;
+  background-color: red;
+}
+#login{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+ .ans {
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  .ans th, .ans td {
+    border: 1px solid black;
+    padding: 20px;
+  }
+  .ans th {
+    background-color:rgb(40, 110, 195);
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .ans tr:hover {
+    background-color: rgb(221, 221, 237);
+  }
+  
+  .ans td {
+    font-size: 14px;
+    color:black
+  }
+  /* ==========home =========== */
+
+  .Home {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Home h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .homeup {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 25%;
+  }
+  
+  .homemid {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 25%;
+
+  }
+  
+  .homedown {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 25%;
+
+  }
+  
+
+  /* ========search======== */
+  #Search{
+    padding: "20px";
+    width: "100%";
+    border: "1px solid black";
+  }
+  
+  /* ==============footer=== */
+
+  #footer{
+    background-color: "#333";
+    color: "#fff";
+    text-align: "center";
+    padding: "10px 0";
+    position: "fixed";
+    bottom: "0";
+    width: "100%";
+  }
+

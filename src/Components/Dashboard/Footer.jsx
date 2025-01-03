@@ -2,7 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>dash Footer</div>
+    <footer id='footer'>
+      <p>&copy; {new Date().getFullYear()} Product Management System. All rights reserved.</p>
+    </footer>
   )
 }
 

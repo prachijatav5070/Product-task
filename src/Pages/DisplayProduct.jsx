@@ -1,46 +1,43 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React from "react";
 import { ImCross } from "react-icons/im";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteProduct } from "../Redux/ProductSlice";
 
 const DisplayProduct = () => {
-const [mydata ,setMydata]=useState([]);
+    const dispatch = useDispatch();
+    const filteredData = useSelector((state) => state.product.filteredProducts); // Use filtered products
 
-const loadData=()=>{
-    let api="http://localhost:3000/product";
-    axios.get(api).then((res)=>{
-     setMydata(res.data);
-    })
-}
+    const handleDelete = (id) => {
+        dispatch(deleteProduct(id)); // Delete pro
+    };
 
-useEffect(()=>{
-    loadData();
-})
-
-const ans=mydata.map((key)=>{
-    return(
-        <>
-        <tr>
-            <td> {key.name} </td>
-            <td> {key.price} </td>
-            <td> <ImCross /></td>
+    const ans = filteredData.map((key) => (
+        <tr key={key.id}>
+            <td>{key.name}</td>
+            <td>${key.price}</td>
+            <td
+                style={{ color: "red", cursor: "pointer" }}
+                onClick={() => handleDelete(key.id)}
+            >
+                <ImCross />
+            </td>
         </tr>
-        
-        </>
-    )
-})
-  return (
-    <div>
-     <table>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>delete</th>
-        </tr>
-        {ans}
-     </table>
+    ));
 
-    </div>
-  )
-}
+    return (
+        <div className="table_container">
+            <table className="ans">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>{ans}</tbody>
+            </table>
+        </div>
+    );
+};
 
-export default DisplayProduct
+export default DisplayProduct;

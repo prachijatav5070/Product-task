@@ -2,17 +2,23 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../Redux/productSlice';
+import { useSelector } from 'react-redux';
 // import axios  from 'axios';
 const AddProductForm = () => {
+  const mydata = useSelector(state=>state.product.products)
+console.log(mydata.length);
 
     const [input, setInput]=useState([]);
+    const dispatch = useDispatch()
 
     const handleSubmit= async ()=>{
-        
-        let api="http://localhost:3000/product";
-        axios.post(api,input).then((res)=>{
-        alert("sucussefull")
-        })
+        dispatch(addProduct({...input,id:Date.now()}))
+        // let api="http://localhost:3000/product";
+        // axios.post(api,input).then((res)=>{
+        // alert("sucussefull")
+        // })
     }
 
     const handleInput=(e)=>{

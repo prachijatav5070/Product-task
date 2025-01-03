@@ -17,9 +17,9 @@ const Header = () => {
     
   return (
     <div>
- <Navbar expand="lg" className="bg-body-tertiary">
+ <Navbar expand="lg" className="bg-dark-tertiary" id='nav'>
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#" id='navheading'>Product Management System</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -27,20 +27,14 @@ const Header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="home">Home</Nav.Link>
-            <Nav.Link as={Link} to="addproduct">Addproduct</Nav.Link>
-            <Nav.Link as={Link} to="display">Display</Nav.Link>
+            <Nav.Link as={Link} to="home"></Nav.Link>
+            <Nav.Link as={Link} to="addproduct"></Nav.Link>
+            <Nav.Link as={Link} to="display"></Nav.Link>
+            <Nav.Link as={Link} to="search"></Nav.Link>
           </Nav>
           <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success" >Search</Button>
-            <Button variant="outline-danger" onClick={handleLogout}>Logout</Button>
-
+ 
+            <Button id='logout' onClick={handleLogout}>Logout</Button>
 
           </Form>
         </Navbar.Collapse>

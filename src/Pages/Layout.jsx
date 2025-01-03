@@ -8,9 +8,7 @@ const Layout = () => {
 
     <>
     <Header/>
-    <hr />
     <Outlet/>
-    <hr />
     <Footer/>
     </>
   )

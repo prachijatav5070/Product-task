@@ -7,7 +7,7 @@ const LoginLayout = () => {
         <>
 
         <Header/>
-        <hr size="4" />
+        
         <Outlet/>
         <hr />
         <Footer/>
